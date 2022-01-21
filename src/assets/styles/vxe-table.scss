@@ -1,0 +1,90 @@
+@import 'vxe-table/styles/variable.scss';
+
+$mainColor: #f7e1af;
+// 修改样式变量
+$vxe-table-header-background-color: rgba(255, 255, 255, 0.04);
+$vxe-table-header-font-color: #8f9598;
+$vxe-table-header-font-weight: normal;
+$vxe-table-body-background-color: rgba(87, 172, 109, 0.12);
+$vxe-table-font-color: $mainColor;
+$vxe-table-row-striped-background-color: #090f0e;
+$vxe-table-resizable-line-color: rgba(255, 255, 255, 0.12);
+$vxe-table-menu-background-color: #090f0e;
+$vxe-table-row-height-mini: 32px;
+$vxe-table-row-current-background-color: rgba(255, 154, 84, 0.64);
+$vxe-font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+  Microsoft YaHei, Arial, sans-serif;
+// ...
+
+@import 'vxe-table/styles/modules.scss';
+
+.vxe-table--header-wrapper {
+  background-color: $vxe-table-header-background-color !important;
+}
+
+// 右键菜单
+.vxe-table--context-menu-wrapper,
+.vxe-table--context-menu-clild-wrapper,
+.vxe-context-menu--link-suffix.suffix--haschild:before,
+.vxe-context-menu--option-wrapper,
+.vxe-table--context-menu-clild-wrapper,
+.vxe-context-menu--option-wrapper li,
+.vxe-table--context-menu-clild-wrapper li,
+.vxe-table--context-menu-clild-wrapper li.link--disabled.link--active {
+  border: none !important;
+}
+.vxe-context-menu--link {
+  width: auto;
+  padding: 0 8px;
+}
+.vxe-table--context-menu-wrapper {
+  li {
+    margin-bottom: 2px;
+    background-color: #203e3e;
+    &.link--active {
+      border: none;
+      > .vxe-context-menu--link {
+        color: $mainColor;
+      }
+    }
+  }
+  a {
+    text-align: center;
+    font-size: 14px;
+    color: #ece4af;
+    height: 32px;
+    line-height: 32px;
+    background-color: #203e3e;
+  }
+}
+
+// 滚动条
+.vxe-table--body-wrapper {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #136c5e;
+    border-radius: 4px;
+  }
+  /*边角，即两个滚动条的交汇处*/
+  &::-webkit-scrollbar-corner {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
+// 实时更新的行
+.newest-row {
+  background-color: #136c5e !important;
+}
+.my-row {
+  background-color: rgba(242, 79, 215, 0.25) !important;
+}
+.row--current {
+  background-color: rgba(255, 154, 84, 0.64) !important;
+  .vxe-body--column {
+    background-color: rgba(255, 154, 84, 0.64) !important;
+  }
+}

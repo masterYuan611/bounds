@@ -1,0 +1,75 @@
+$mainColor: #f7e1af;
+
+// 表格编辑后的下拉框弹窗
+.vxe-select-option--wrapper {
+  background-color: #090f0e !important;
+  color: $mainColor;
+}
+.vxe-select-option:not(.is--disabled).is--hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+//时间,日期选择弹出框
+.ant-calendar-disabled-cell {
+  opacity: 0.2;
+}
+.ant-calendar-month-select,
+.ant-calendar-year-select {
+  color: $mainColor !important;
+}
+.ant-calendar-footer-btn {
+  a {
+    color: $mainColor;
+  }
+}
+.ant-calendar-next-month-btn-day,
+.ant-calendar-last-month-cell {
+  .ant-calendar-date {
+    color: rgba(255, 255, 255, 0.2) !important;
+  }
+}
+// .ant-time-picker-panel-select{
+//   width: 60px !important;
+//   ul{
+//     width: 60px !important;
+//   }
+// }
+.ant-time-picker-panel-select-option-selected {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+.ant-time-picker-panel-addon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ant-time-picker-panel-input {
+  background: rgba(255, 255, 255, 0);
+  color: $mainColor;
+}
+.ant-time-picker-panel-select ul {
+  padding: 0;
+}
+
+// autoComplete弹出框样式
+.ant-select-dropdown-menu {
+  li {
+    .auto-span {
+      width: 50% !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: left;
+    }
+  }
+}
+
+// 确认框样式
+.ant-modal-confirm-title {
+  color: $mainColor !important;
+}
+.ant-modal-confirm-content {
+  text-align: center;
+}
+.ant-modal-title {
+  color: $mainColor;
+}
